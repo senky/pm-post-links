@@ -23,13 +23,13 @@ class acp_post_links_info
 	{
 		return array(
 			'filename'	=> 'acp_post_links',
-			'title'		=> 'POST_LINKS_TITLE',
-			'version'	=> '1.0.0',
+			'title'		=> 'ACP_POST_LINKS_TITLE',
+			'version'	=> '1.0.1',
 			'modes'		=> array(
-				  'default'	=> array(
-					'title'			=> 'POST_LINKS_TITLE',
-					'auth'			=> 'acl_a_board',
-					'cat'			=> array('ACP_MESSAGES'),
+				'default'	=> array(
+				'title'			=> 'ACP_POST_LINKS_TITLE',
+				'auth'			=> 'acl_a_board',
+				'cat'			=> array('ACP_MESSAGES'),
 				),
 			),
 		);

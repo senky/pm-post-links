@@ -16,12 +16,29 @@
 				<email><![CDATA[jakubsenko@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>1.0.0</mod-version>
+		<mod-version>1.0.1</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>300</time>
 			<target-version>3.0.7-PL1</target-version>
 		</installation>
+		<history>
+			<entry>
+				<date>2010-08-24</date>
+				<rev-version>1.0.1</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Added UMIL installer. Thanks to DoYouSpeakWak for it.]]></change>
+					<change><![CDATA[Added toogle (hide-show) option.]]></change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2010-07-22</date>
+				<rev-version>1.0.0</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Initial release]]></change>
+				</changelog>
+			</entry>
+		</history>
 	</header>
 	<action-group>
 		<copy>
@@ -60,19 +77,19 @@
 				<!-- IF S_LINKS_LINK_ENABLED -->
 				<tr>
 					<td>{L_PL_LINK}:</td>
-					<td style="width: 100%;"><input type="text" value="{postrow.U_MINI_POST}" title="" style="width: inherit;" onclick="this.focus();this.select();" /></td>
+					<td><input style="width: 100%;" type="text" value="{postrow.U_MINI_POST}" title="" style="width: inherit;" onclick="this.focus();this.select();" /></td>
 				</tr>
 				<!-- ENDIF -->
 				<!-- IF S_LINKS_BBCODE_ENABLED -->
 				<tr>
 					<td>{L_PL_BBCODE}:</td>
-					<td style="width: 100%;"><input type="text" value="[url={postrow.U_MINI_POST}]{postrow.POST_SUBJECT}[/url]" title="{TOPIC_TITLE}" style="width: inherit;" onclick="this.focus();this.select();" /></td>
+					<td><input style="width: 100%;" type="text" value="[url={postrow.U_MINI_POST}]{postrow.POST_SUBJECT}[/url]" title="{TOPIC_TITLE}" style="width: inherit;" onclick="this.focus();this.select();" /></td>
 				</tr>
 				<!-- ENDIF -->
-				<!-- IF S_LINKS_HTML_ENABLED -->
+ 				<!-- IF S_LINKS_HTML_ENABLED -->
 				<tr>
 					<td>{L_PL_HTML}:</td>
-					<td style="width: 100%;"><input type="text" value="{postrow.U_MINI_POST_HTML}{postrow.POST_SUBJECT}&lt;/a&gt;" title="" style="width: inherit;" onclick="this.focus();this.select();" /></td>
+					<td><input style="width: 100%;" type="text" value="{postrow.U_MINI_POST_HTML}{postrow.POST_SUBJECT}&lt;/a&gt;" title="" style="width: inherit;" onclick="this.focus();this.select();" /></td>
 				</tr>
 				<!-- ENDIF -->
 				<tr>
@@ -85,6 +102,6 @@
 			</edit>
 		</open>
 		<php-installer><![CDATA[install_post_links.php]]></php-installer>
-		<diy-instructions lang="en"><![CDATA[Go to ACP -> System -> Module management -> Administration control panel -> Posting -> Messages, find "Post link: in drop-down menu, add and enable. After that purge the cache.]]></diy-instructions>
+		<diy-instructions lang="en"><![CDATA[Go to ACP -> Posting -> Messages -> Post links, and activate this mod.]]></diy-instructions>
 	</action-group>
 </mod>
