@@ -16,13 +16,20 @@
 				<email><![CDATA[jakubsenko@gmail.com]]></email>
 			</author>
 		</author-group>
-		<mod-version>1.0.1</mod-version>
+		<mod-version>1.0.2</mod-version>
 		<installation>
 			<level>easy</level>
 			<time>300</time>
-			<target-version>3.0.7-PL1</target-version>
+			<target-version>3.0.10</target-version>
 		</installation>
 		<history>
+			<entry>
+				<date>1012-08-15</date>
+				<rev-version>1.0.2</rev-version>
+				<changelog lang="en">
+					<change><![CDATA[Updated to 3.0.10]]></change>
+				</changelog>
+			</entry>
 			<entry>
 				<date>2010-08-24</date>
 				<rev-version>1.0.1</rev-version>
@@ -46,7 +53,7 @@
 		</copy>
 		<open src="viewtopic.php">
 			<edit>
-				<find><![CDATA[	'S_MOD_ACTION' 			=> append_sid("{$phpbb_root_path}mcp.$phpEx", "f=$forum_id&amp;t=$topic_id&amp;start=$start&amp;quickmod=1&amp;redirect=" . urlencode(str_replace('&amp;', '&', $viewtopic_url)), true, $user->session_id),]]></find>
+				<find><![CDATA[	'S_MOD_ACTION' 			=> append_sid("{$phpbb_root_path}mcp.$phpEx", "f=$forum_id&amp;t=$topic_id" . (($start == 0) ? '' : "&amp;start=$start") . "&amp;quickmod=1&amp;redirect=" . urlencode(str_replace('&amp;', '&', $viewtopic_url)), true, $user->session_id),]]></find>
 				<action type="after-add"><![CDATA[	'S_LINKS_ENABLED' 			=> $config['pl_enable'],
 	'S_LINKS_LINK_ENABLED' 			=> $config['pl_link'],
 	'S_LINKS_BBCODE_ENABLED' 			=> $config['pl_bbcode'],

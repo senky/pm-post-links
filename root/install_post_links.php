@@ -81,6 +81,15 @@ $versions = array(
 			array(), // Purge the forum's cache folder
 		),
 	),
+
+	// Version 1.0.2
+	'1.0.2'	=> array(
+		// no change in DB, just purge templates
+		'cache_purge' => array(
+			'template', // All of them
+			array(), // Purge the forum's cache folder
+		),
+	),
 );
 
 // Include the UMIF Auto file and everything else will be handled automatically.
